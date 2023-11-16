@@ -23,3 +23,7 @@ fc-cache -fv
 
 systemctl enable --now dnf-automatic-install.timer
 
+
+# TODO
+# add templates for ubuntu
+# isntall vscode, neofetch, bleachbit, discord, cheese, gimp, gnome-tweaks, htop, notepadqq, qbittorrent, synaptic, timeshift, vim, vlc, wireshark, ubuntu-resitricted-extras, gnome-logs, calibre, nordvpn, firefox, spotify, tor
