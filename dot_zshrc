@@ -83,6 +83,8 @@ plugins=(git sudo web-search zsh-autosuggestions colored-man-pages command-not-f
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
+export EDITOR="vim"
+export PATH=/opt/:$PATH
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -135,8 +137,3 @@ setopt INC_APPEND_HISTORY
 export HISTTIMEFORMAT="[%F %T] "
 setopt EXTENDED_HISTORY
 setopt HIST_IGNORE_ALL_DUPS
-
-# Add Java to PATH
-export JAVA_HOME="/home/chime/Coding/jdk-19"
-export PATH=$JAVA_HOME/bin:$PATH
-
