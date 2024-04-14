@@ -21,7 +21,7 @@ cp -r fonts/* /usr/local/share/fonts
 
 fc-cache -fv
 
-systemctl enable --now dnf-automatic-install.timer
+# systemctl enable --now dnf-automatic-install.timer
 
 
 # TODO
