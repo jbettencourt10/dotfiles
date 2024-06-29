@@ -13,6 +13,8 @@ if [[ $linux_distro == *"Fedora"* ]]; then
         yum update
         yum install firefox fastfetch htop wireshark vim vlc gimp zsh
         # TODO: it would be a good idea to add a few cleanup tasks here
+        yum autoremove
+        yum clean all
 elif [[ $linux_distro == *"Ubuntu"* ]]; then
         apt update
         apt full-upgrade 
