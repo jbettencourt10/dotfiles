@@ -37,9 +37,9 @@ sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply git@github.com:$GITHUB_USER
 
 chsh -s $(which zsh)
 
-cp -r fonts/* /usr/local/share/fonts
 
-fc-cache -fv
+mkdir -p ~/.local/share/fonts/ && cp ~/fonts/* ~/.local/share/fonts && fc-cache -fv
+
 
 echo "You should now login and then out!"
 
