@@ -24,8 +24,16 @@ elif [[ $linux_distro == *"Ubuntu"* ]]; then
 
 fi
 
+
+ssh-keygen
+# UPLOAD THIS TO GIT
+
 # Chezmoi isntallation and zsh installation
-chezmoi init --apply jbettencourt10
+GITHUB_USERNAME=jbettencourt10
+
+sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply git@github.com:$GITHUB_USERNAME/dotfiles.git
+
+
 
 chsh -s $(which zsh)
 
