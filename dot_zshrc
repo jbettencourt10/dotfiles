@@ -1,6 +1,5 @@
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
+# Initialization code that may require console input (password prompts, [y/n] # confirmations, etc.) must go above this block; everything else may go below.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
@@ -18,8 +17,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="powerlevel10k/powerlevel10k"
-#ZSH_THEME="agnoster"
-# Set list of themes to pick from when loading at random
+#ZSH_THEME="agnoster" # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
 # If set to an empty array, this variable will have no effect.
@@ -30,7 +28,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Uncomment the following line to use hyphen-insensitive completion.
 # Case-sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
+HYPHEN_INSENSITIVE="true"
 
 # Uncomment one of the following lines to change the auto-update behavior
 # zstyle ':omz:update' mode disabled  # disable automatic updates
@@ -113,22 +111,10 @@ export PATH=/opt/:$PATH
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-export PATH="${PATH}"
+# Add chezmoi to path
+export PATH=$PATH:~/bin
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/chime/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/chime/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/chime/anaconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/chime/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
+export PATH="${PATH}"
 
 # Increase History Size (jb)
 export HISTFILESIZE=1000000000
@@ -137,3 +123,13 @@ setopt INC_APPEND_HISTORY
 export HISTTIMEFORMAT="[%F %T] "
 setopt EXTENDED_HISTORY
 setopt HIST_IGNORE_ALL_DUPS
+
+alias mts_python='source /home/jarred/code/envs/mts/bin/activate'
+alias sudo_mts_python='sudo /home/jarred/code/envs/mts/bin/python3'
+alias sudo_pytest='sudo /home/jarred/code/envs/mts/bin/python3 -m pytest'
+alias redeploy='cd /home/jarred/code/repos/mts_main && make clean && make && sudo make install && sudo python3 mtsApp/app/MtsMain.py'
+
+resync() {
+   rsync -a --delete ~/code/repos/mts_main/ avwatchmts@${1}:~/mts_main/
+}
+

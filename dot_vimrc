@@ -10,3 +10,4 @@
 "   Ps = 6  -> steady bar (xterm).
 let &t_SI = "\e[5 q"
 let &t_EI = "\e[2 q"
+cmap w!! w !sudo tee > /dev/null %
