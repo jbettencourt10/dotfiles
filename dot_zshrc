@@ -130,6 +130,10 @@ alias sudo_pytest='sudo /home/jarred/code/envs/mts/bin/python3 -m pytest'
 alias redeploy='cd /home/jarred/code/repos/mts_main && make clean && make && sudo make install && sudo python3 mtsApp/app/MtsMain.py'
 
 resync() {
-   rsync -a --delete ~/code/repos/mts_main/ avwatchmts@${1}:~/mts_main/
+   rsync -a --delete ~/code/repos/${2}/ avwatchmts@${1}:~/${2}/
 }
 
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
