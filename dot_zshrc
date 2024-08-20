@@ -130,7 +130,7 @@ alias sudo_pytest='sudo /home/jarred/code/envs/mts/bin/python3 -m pytest'
 alias redeploy='cd /home/jarred/code/repos/mts_main && make clean && make && sudo make install && sudo python3 mtsApp/app/MtsMain.py'
 
 resync() {
-   rsync -aP --compress --delete --backup ${2} ${1}:${3}
+   rsync -aP --compress --delete --backup ${1} ${2}
 }
 
 
