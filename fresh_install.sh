@@ -8,17 +8,19 @@ if [ "$(id -u)" -ne 0 ]; then
 fi
 
 
+# TODO: fastfetch has a ppa that needs to be added
+
 if [[ $linux_distro == *"Fedora"* ]]; then
-        yum check-update
-        yum update
-        yum install firefox fastfetch htop wireshark vim vlc gimp zsh
+        dnf check-update
+        dnf update
+        dnf install firefox fastfetch htop wireshark vim vlc gimp zsh
         # TODO: it would be a good idea to add a few cleanup tasks here
-        yum autoremove
-        yum clean all
+        dnf autoremove
+        dnf clean all
 elif [[ $linux_distro == *"Ubuntu"* ]]; then
         apt update
         apt full-upgrade 
-        apt install firefox fastfetch htop wireshark vim vlc gimp zsh gnome-tweaks gnome-logs cheese notepadqq ubuntu-resitricted-extras
+        apt install firefox fastfetch htop wireshark vim vlc gimp zsh gnome-tweaks gnome-logs cheese notepadqq ubuntu-restricted-extras
         apt autoremove
         apt clean
 
