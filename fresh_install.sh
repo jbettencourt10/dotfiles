@@ -45,4 +45,5 @@ echo "You should now login and then out!"
 
 # TODO
 # add templates for ubuntu
-# isntall vscode, bleachbit, discord, synaptic, timeshift, nordvpn, spotify, tor
+# isntall vscode, bleachbit, discord, synaptic, timeshift, nordvpn, spotify, tor, tmux, nvim, nvchad
+# wl-clipboard for wayland neovim
