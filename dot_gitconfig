@@ -1,3 +1,30 @@
 [user]
 	name = Jarred Bettencourt
 	email = jbettencourt10@gmail.com
+[core]
+	editor = vim
+	autocrlf = input
+	excludesfile = /home/chime/.gitignore_global
+[init]
+	defaultBranch = main
+[color]
+	ui = auto
+#[merge]
+#	tool = vimdiff
+#[diff]
+#	tool = vimdiff
+#[pull]
+#	rebase = true
+[help]
+	autocorrect = 1
+[prompt]
+	branch = true
+#[credential]
+#	helper = cache
+#[alias]
+#	co = checkout
+#	br = branch
+#	ci = commit
+#	st = status
+#[push]
+#	default = simple
