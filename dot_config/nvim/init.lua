@@ -75,12 +75,12 @@ vim.opt.wildmenu = true          -- Enhanced command line completion
 vim.opt.lazyredraw = true        -- Redraw screen only when needed (improves performance)
 vim.opt.ttyfast = true           -- Improve performance on slow terminals
 -- Backup and Undo
-vim.opt.backup = true            -- Enable backups
-vim.opt.writebackup = true       -- Write backup before overwriting a file
-vim.opt.undofile = true          -- Enable persistent undo
-vim.opt.swapfile = true          -- Enable swap file creation
-
-vim.opt.backupdir = '~/.local/share/nvim/backup//'
-vim.opt.directory = '~/.local/share/nvim/swap//'
-vim.opt.undodir = '~/.local/share/nvim/undo//'
+-- vim.opt.backup = true            -- Enable backups
+--vim.opt.writebackup = true       -- Write backup before overwriting a file
+--vim.opt.undofile = true          -- Enable persistent undo
+--vim.opt.swapfile = true          -- Enable swap file creation
+--
+--vim.opt.backupdir = '~/.local/share/nvim/backup//'
+--vim.opt.directory = '~/.local/share/nvim/swap//'
+--vim.opt.undodir = '~/.local/share/nvim/undo//'
 
