@@ -68,13 +68,12 @@ vim.opt.smartcase = true         -- Override ignorecase if search term contains 
 vim.opt.incsearch = true         -- Show search matches as you type
 vim.opt.hlsearch = true          -- Highlight search matches
 vim.opt.clipboard = 'unnamedplus'-- Use the system clipboard
-vim.opt.mouse = 'a'              -- Enable mouse support
+vim.opt.mouse = 'v'              -- Enable mouse support
 vim.opt.cursorline = true        -- Highlight the current line
 vim.opt.ruler = true             -- Show cursor position in the status line
 vim.opt.wildmenu = true          -- Enhanced command line completion
 vim.opt.lazyredraw = true        -- Redraw screen only when needed (improves performance)
 vim.opt.ttyfast = true           -- Improve performance on slow terminals
-vim.api.nvim_set_option("clipboard", "unnamed")
 -- Backup and Undo
 vim.opt.backup = true            -- Enable backups
 vim.opt.writebackup = true       -- Write backup before overwriting a file
