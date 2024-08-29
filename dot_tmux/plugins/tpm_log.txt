@@ -1,0 +1,168 @@
+[2024-08-26 20:06:04.722]	 List of discovered tpm plugins: tmux-plugins/tpm tmux-plugins/tmux-sensible erikw/tmux-powerline
+[2024-08-26 20:06:04.737]	 Invoking /home/chime/.tmux/plugins//tpm/bin/install_plugins
+[2024-08-26 20:06:04.762]	 Installing "tmux-sensible"
+[2024-08-26 20:06:04.763]	 Installing "tmux-powerline"
+[2024-08-26 20:06:04.763]	 Already installed "tpm"
+[2024-08-26 20:06:05.008]	   "tmux-sensible" download success
+[2024-08-26 20:06:05.047]	   "tmux-powerline" download success
+[2024-08-26 20:06:05.062]	 Invoking /home/chime/.tmux/plugins//tpm/bin/update_plugins all
+[2024-08-26 20:06:05.081]	 Updating all plugins!
+[2024-08-26 20:06:05.081]	 
+[2024-08-26 20:06:05.248]	   "tmux-powerline" update success
+[2024-08-26 20:06:05.250]	     | Already up to date.
+[2024-08-26 20:06:05.264]	   "tmux-sensible" update success
+[2024-08-26 20:06:05.266]	     | Already up to date.
+[2024-08-26 20:06:05.936]	   "tpm" update success
+[2024-08-26 20:06:05.938]	     | Already up to date.
+[2024-08-26 20:06:05.938]	     | Submodule 'lib/tmux-test' (https://github.com/tmux-plugins/tmux-test.git) registered for path 'lib/tmux-test'
+[2024-08-26 20:06:05.939]	     | Cloning into '/home/chime/.tmux/plugins/tpm/lib/tmux-test'...
+[2024-08-26 20:06:05.939]	     | From https://github.com/tmux-plugins/tmux-test
+[2024-08-26 20:06:05.939]	     |  * branch            33fa65fbfb72ba6dd106c21bf5ee6cc353ecdbb6 -> FETCH_HEAD
+[2024-08-26 20:06:05.939]	     | Submodule path 'lib/tmux-test': checked out '33fa65fbfb72ba6dd106c21bf5ee6cc353ecdbb6'
+[2024-08-26 20:06:05.955]	 Invoking /home/chime/.tmux/plugins//tpm/bin/clean_plugins all
+[2024-08-26 20:06:05.993]	 Done.
+
+[2024-08-26 20:06:08.075]	 List of discovered tpm plugins: tmux-plugins/tpm tmux-plugins/tmux-sensible erikw/tmux-powerline
+[2024-08-26 20:06:08.089]	 Invoking /home/chime/.tmux/plugins//tpm/bin/install_plugins
+[2024-08-26 20:06:08.116]	 Already installed "tpm"
+[2024-08-26 20:06:08.116]	 Already installed "tmux-sensible"
+[2024-08-26 20:06:08.117]	 Already installed "tmux-powerline"
+[2024-08-26 20:06:08.130]	 Invoking /home/chime/.tmux/plugins//tpm/bin/update_plugins all
+[2024-08-26 20:06:08.144]	 Updating all plugins!
+[2024-08-26 20:06:08.144]	 
+[2024-08-26 20:06:08.324]	   "tmux-sensible" update success
+[2024-08-26 20:06:08.326]	   "tpm" update success
+[2024-08-26 20:06:08.326]	     | Already up to date.
+[2024-08-26 20:06:08.327]	     | Already up to date.
+[2024-08-26 20:06:08.337]	   "tmux-powerline" update success
+[2024-08-26 20:06:08.338]	     | Already up to date.
+[2024-08-26 20:06:08.352]	 Invoking /home/chime/.tmux/plugins//tpm/bin/clean_plugins all
+[2024-08-26 20:06:08.391]	 Done.
+
+[2024-08-26 20:06:08.443]	 List of discovered tpm plugins: tmux-plugins/tpm tmux-plugins/tmux-sensible erikw/tmux-powerline
+[2024-08-26 20:06:08.456]	 Invoking /home/chime/.tmux/plugins//tpm/bin/install_plugins
+[2024-08-26 20:06:08.489]	 Invoking /home/chime/.tmux/plugins//tpm/bin/update_plugins all
+[2024-08-26 20:06:08.502]	 Updating all plugins!
+[2024-08-26 20:06:08.502]	 
+[2024-08-26 20:06:08.522]	 Invoking /home/chime/.tmux/plugins//tpm/bin/clean_plugins all
+[2024-08-26 20:06:08.543]	 Removing "tmux-powerline"
+[2024-08-26 20:06:08.547]	   "tmux-powerline" clean success
+[2024-08-26 20:06:08.548]	 Removing "tmux-sensible"
+[2024-08-26 20:06:08.550]	   "tmux-sensible" clean success
+[2024-08-26 20:06:08.565]	 Done.
+
+[2024-08-26 20:06:13.516]	 List of discovered tpm plugins: tmux-plugins/tpm tmux-plugins/tmux-sensible erikw/tmux-powerline
+[2024-08-26 20:06:13.530]	 Invoking /home/chime/.tmux/plugins//tpm/bin/install_plugins
+[2024-08-26 20:06:13.797]	 List of discovered tpm plugins: tmux-plugins/tpm tmux-plugins/tmux-sensible erikw/tmux-powerline
+[2024-08-26 20:06:13.810]	 Invoking /home/chime/.tmux/plugins//tpm/bin/install_plugins
+[2024-08-26 20:06:13.839]	 Already installed "tpm"
+[2024-08-26 20:06:13.839]	 Already installed "tmux-sensible"
+[2024-08-26 20:06:13.839]	 Already installed "tmux-powerline"
+[2024-08-26 20:06:13.854]	 Invoking /home/chime/.tmux/plugins//tpm/bin/update_plugins all
+[2024-08-26 20:06:13.555]	 Installing "tmux-sensible"
+[2024-08-26 20:06:13.555]	 Installing "tmux-powerline"
+[2024-08-26 20:06:13.556]	 Already installed "tpm"
+[2024-08-26 20:06:13.745]	   "tmux-sensible" download success
+[2024-08-26 20:06:13.882]	   "tmux-powerline" download success
+[2024-08-26 20:06:13.902]	 Invoking /home/chime/.tmux/plugins//tpm/bin/update_plugins all
+[2024-08-26 20:06:13.871]	 Updating all plugins!
+[2024-08-26 20:06:13.871]	 
+[2024-08-26 20:06:14.061]	   "tmux-sensible" update success
+[2024-08-26 20:06:14.063]	     | Already up to date.
+[2024-08-26 20:06:14.070]	   "tmux-powerline" update success
+[2024-08-26 20:06:14.072]	   "tpm" update success
+[2024-08-26 20:06:14.072]	     | Already up to date.
+[2024-08-26 20:06:14.073]	     | Already up to date.
+[2024-08-26 20:06:14.092]	 Invoking /home/chime/.tmux/plugins//tpm/bin/clean_plugins all
+[2024-08-26 20:06:14.138]	 Done.
+
+[2024-08-26 20:06:13.921]	 Updating all plugins!
+[2024-08-26 20:06:13.921]	 
+[2024-08-26 20:06:14.088]	   "tpm" update success
+[2024-08-26 20:06:14.090]	     | Already up to date.
+[2024-08-26 20:06:14.112]	   "tmux-powerline" update success
+[2024-08-26 20:06:14.114]	     | Already up to date.
+[2024-08-26 20:06:14.143]	   "tmux-sensible" update success
+[2024-08-26 20:06:14.145]	     | Already up to date.
+[2024-08-26 20:06:14.161]	 Invoking /home/chime/.tmux/plugins//tpm/bin/clean_plugins all
+[2024-08-26 20:06:14.853]	 Done.
+
+[2024-08-26 20:06:20.484]	 List of discovered tpm plugins: tmux-plugins/tpm tmux-plugins/tmux-sensible erikw/tmux-powerline
+[2024-08-26 20:06:20.497]	 Invoking /home/chime/.tmux/plugins//tpm/bin/install_plugins
+[2024-08-26 20:06:20.524]	 Already installed "tpm"
+[2024-08-26 20:06:20.524]	 Already installed "tmux-sensible"
+[2024-08-26 20:06:20.525]	 Already installed "tmux-powerline"
+[2024-08-26 20:06:20.538]	 Invoking /home/chime/.tmux/plugins//tpm/bin/update_plugins all
+[2024-08-26 20:06:20.552]	 Updating all plugins!
+[2024-08-26 20:06:20.552]	 
+[2024-08-26 20:06:20.728]	   "tpm" update success
+[2024-08-26 20:06:20.730]	     | Already up to date.
+[2024-08-26 20:06:20.742]	   "tmux-powerline" update success
+[2024-08-26 20:06:20.744]	     | Already up to date.
+[2024-08-26 20:06:20.790]	   "tmux-sensible" update success
+[2024-08-26 20:06:20.792]	     | Already up to date.
+[2024-08-26 20:06:20.806]	 Invoking /home/chime/.tmux/plugins//tpm/bin/clean_plugins all
+[2024-08-26 20:06:20.844]	 Done.
+
+[2024-08-26 20:06:27.373]	 List of discovered tpm plugins: tmux-plugins/tpm tmux-plugins/tmux-sensible erikw/tmux-powerline
+[2024-08-26 20:06:27.389]	 Invoking /home/chime/.tmux/plugins//tpm/bin/install_plugins
+[2024-08-26 20:06:27.419]	 Already installed "tpm"
+[2024-08-26 20:06:27.419]	 Already installed "tmux-sensible"
+[2024-08-26 20:06:27.420]	 Already installed "tmux-powerline"
+[2024-08-26 20:06:27.434]	 Invoking /home/chime/.tmux/plugins//tpm/bin/update_plugins all
+[2024-08-26 20:06:27.450]	 Updating all plugins!
+[2024-08-26 20:06:27.450]	 
+[2024-08-26 20:06:27.632]	   "tmux-sensible" update success
+[2024-08-26 20:06:27.634]	     | Already up to date.
+[2024-08-26 20:06:27.635]	   "tpm" update success
+[2024-08-26 20:06:27.637]	     | Already up to date.
+[2024-08-26 20:06:27.638]	   "tmux-powerline" update success
+[2024-08-26 20:06:27.640]	     | Already up to date.
+[2024-08-26 20:06:27.655]	 Invoking /home/chime/.tmux/plugins//tpm/bin/clean_plugins all
+[2024-08-26 20:06:27.697]	 Done.
+
+[2024-08-26 20:06:51.874]	 List of discovered tpm plugins: tmux-plugins/tpm tmux-plugins/tmux-sensible erikw/tmux-powerline
+[2024-08-26 20:06:51.888]	 Invoking /home/chime/.tmux/plugins//tpm/bin/install_plugins
+[2024-08-26 20:06:51.916]	 Already installed "tpm"
+[2024-08-26 20:06:51.917]	 Already installed "tmux-sensible"
+[2024-08-26 20:06:51.917]	 Already installed "tmux-powerline"
+[2024-08-26 20:06:51.932]	 Invoking /home/chime/.tmux/plugins//tpm/bin/update_plugins all
+[2024-08-26 20:06:51.946]	 Updating all plugins!
+[2024-08-26 20:06:51.946]	 
+[2024-08-26 20:06:52.106]	   "tpm" update success
+[2024-08-26 20:06:52.108]	     | Already up to date.
+[2024-08-26 20:06:52.123]	   "tmux-powerline" update success
+[2024-08-26 20:06:52.125]	     | Already up to date.
+[2024-08-26 20:06:52.129]	   "tmux-sensible" update success
+[2024-08-26 20:06:52.130]	     | Already up to date.
+[2024-08-26 20:06:52.145]	 Invoking /home/chime/.tmux/plugins//tpm/bin/clean_plugins all
+[2024-08-26 20:06:52.187]	 Done.
+
+[2024-08-26 20:11:24.968]	 List of discovered tpm plugins: tmux-plugins/tmux-sensible erikw/tmux-powerline
+[2024-08-26 20:11:24.983]	 Invoking /home/chime/.tmux/plugins/tpm/bin/install_plugins
+[2024-08-26 20:11:25.011]	 Already installed "tmux-sensible"
+[2024-08-26 20:11:25.011]	 Already installed "tmux-powerline"
+[2024-08-26 20:11:25.027]	 Invoking /home/chime/.tmux/plugins/tpm/bin/update_plugins all
+[2024-08-26 20:11:25.042]	 Updating all plugins!
+[2024-08-26 20:11:25.042]	 
+[2024-08-26 20:11:25.210]	   "tmux-sensible" update success
+[2024-08-26 20:11:25.212]	   "tmux-powerline" update success
+[2024-08-26 20:11:25.212]	     | Already up to date.
+[2024-08-26 20:11:25.213]	     | Already up to date.
+[2024-08-26 20:11:25.228]	 Invoking /home/chime/.tmux/plugins/tpm/bin/clean_plugins all
+[2024-08-26 20:11:25.267]	 Done.
+
+[2024-08-26 20:12:21.668]	 List of discovered tpm plugins: tmux-plugins/tmux-sensible erikw/tmux-powerline
+[2024-08-26 20:12:21.682]	 Invoking /home/chime/.tmux/plugins/tpm/bin/install_plugins
+[2024-08-26 20:12:21.709]	 Already installed "tmux-sensible"
+[2024-08-26 20:12:21.709]	 Already installed "tmux-powerline"
+[2024-08-26 20:12:21.726]	 Invoking /home/chime/.tmux/plugins/tpm/bin/update_plugins all
+[2024-08-26 20:12:21.740]	 Updating all plugins!
+[2024-08-26 20:12:21.740]	 
+[2024-08-26 20:12:21.910]	   "tmux-sensible" update success
+[2024-08-26 20:12:21.911]	     | Already up to date.
+[2024-08-26 20:12:21.913]	   "tmux-powerline" update success
+[2024-08-26 20:12:21.914]	     | Already up to date.
+[2024-08-26 20:12:21.929]	 Invoking /home/chime/.tmux/plugins/tpm/bin/clean_plugins all
+[2024-08-26 20:12:21.969]	 Done.
+
