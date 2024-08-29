@@ -39,7 +39,8 @@ vim.opt.cursorline = true
 vim.opt.ruler = true
 vim.opt.wildmenu = true
 vim.opt.ttyfast = true
-
+vim.g.autoformat = false
+vim.opt.fixendofline = false
 -- vim.opt.writebackup = true
 -- vim.opt.undofile = true
 -- vim.opt.swapfile = true
