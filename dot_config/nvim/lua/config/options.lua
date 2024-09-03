@@ -16,11 +16,12 @@ vim.opt.relativenumber = true
 vim.cmd("syntax on")
 
 -- Tabs and indentation
+vim.opt.softtabstop = 4
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
+vim.opt.expandtab = false
 vim.opt.autoindent = true
 vim.opt.smartindent = true
-vim.opt.expandtab = true
 
 -- Search settings
 vim.opt.ignorecase = true
