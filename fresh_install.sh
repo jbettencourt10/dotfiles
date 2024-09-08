@@ -45,7 +45,7 @@ chsh -s $(which zsh)
 
 mkdir -p ~/.local/share/fonts/ && cp ~/fonts/* ~/.local/share/fonts && fc-cache -fv
 
-echo "You should now login and then out!"
+echo "You should now reboot the system!"
 
 # Manual Tasks:
 # Install Bitwarden extension
