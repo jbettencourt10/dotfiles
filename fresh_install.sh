@@ -16,6 +16,8 @@ if [ "$(id -u)" -ne 0 ]; then
         exit 1
 fi
 
+# TODO: Set y to be dfault action by adding to /etc/dnf/dnf.conf
+
 if [[ $linux_distro == *"Fedora"* ]]; then
         dnf check-update
         dnf update
@@ -40,7 +42,7 @@ elif [[ $linux_distro == *"Ubuntu"* ]]; then
         apt clean
 fi
 
-
+# TODO: Add node
 chsh -s $(which zsh)
 
 mkdir -p ~/.local/share/fonts/ && cp ~/fonts/* ~/.local/share/fonts && fc-cache -fv
