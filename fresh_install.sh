@@ -9,6 +9,7 @@
         # sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply git@github.com:$GITHUB_USERNAME/dotfiles.git
 # Then run this script
 
+# FIXME: this command does not exist on fedora for some reason
 linux_distro=$(lsb_release -a)
 
 if [ "$(id -u)" -ne 0 ]; then
