@@ -1,7 +1,0 @@
-; author: CI/CD
-
-% test, first
-
-# trivial case -> "foo"
-echo "foo"
-
