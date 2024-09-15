@@ -9,15 +9,12 @@
         # sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply git@github.com:$GITHUB_USERNAME/dotfiles.git
 # Then run this script
 
-# FIXME: this command does not exist on fedora for some reason
 linux_distro=$(lsb_release -a)
 
 if [ "$(id -u)" -ne 0 ]; then
         echo 'This script must be run by root' >&2
         exit 1
 fi
-
-# TODO: Set y to be dfault action by adding to /etc/dnf/dnf.conf
 
 if [[ $linux_distro == *"Fedora"* ]]; then
         dnf check-update
@@ -43,7 +40,7 @@ elif [[ $linux_distro == *"Ubuntu"* ]]; then
         apt clean
 fi
 
-# TODO: Add node
+
 chsh -s $(which zsh)
 
 mkdir -p ~/.local/share/fonts/ && cp ~/fonts/* ~/.local/share/fonts && fc-cache -fv
