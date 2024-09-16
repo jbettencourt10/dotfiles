@@ -59,4 +59,4 @@
 [push]
     default = current
     followTags = true      # Automatically pushes tags related to commits
-	autoSetupRemote = simple
+	autoSetupRemote = true
