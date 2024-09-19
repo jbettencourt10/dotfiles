@@ -67,7 +67,7 @@
 [commit]
     verbose = true
     gpgsign = true
-	template = /home/chime/.gitmessage
+	template = ~/.gitmessage
 
 [alias]
     co = checkout
