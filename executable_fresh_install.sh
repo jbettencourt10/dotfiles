@@ -85,3 +85,4 @@ echo "- Install Bitwarden extension"
 # echo "- Add templates for Ubuntu"
 # echo "- Install BleachBit, Discord, Synaptic, Timeshift, Spotify, Tor"
 # echo "- Install wl-clipboard for Wayland Neovim"
+# add bat, ripgrep, eza, httpie, fd, fzf
