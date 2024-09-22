@@ -6,3 +6,4 @@ alias redeploy='cd /home/jarred/code/repos/mts_main && make clean && make && sud
 
 # Personal Aliases
 alias vim=nvim
+alias nview="nvim -R"
