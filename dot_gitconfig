@@ -1,6 +1,7 @@
 [user]
     name = Jarred Bettencourt
     email = jbettencourt10@gmail.com
+	signingkey = 09EDF81C2BC051CE400C0F288B0492628E865D1D
 
 [url "git@github.com:"]
 	insteadOf = "https://github.com/"
@@ -81,3 +82,5 @@
     default = current
     followTags = true      # Automatically pushes tags related to commits
     autoSetupRemote = true
+[gpg]
+	program = gpg
