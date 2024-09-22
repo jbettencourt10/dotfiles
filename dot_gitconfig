@@ -75,6 +75,7 @@
     ci = commit
     st = status
     last = log -1 HEAD     # Adds an alias to check the last commit
+	fwl = push
 
 [push]
     default = current
