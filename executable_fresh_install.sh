@@ -39,7 +39,7 @@ case "$linux_distro" in
     Fedora)
         dnf check-update -y
         dnf upgrade -y
-        dnf install -y firefox fastfetch htop wireshark vim vlc gimp zsh neovim tmux git-delta
+        dnf install -y firefox fastfetch htop wireshark vim vlc gimp zsh neovim tmux git-delta konsole
         cleanup
         ;;
 
@@ -47,7 +47,7 @@ case "$linux_distro" in
         add-apt-repository -y ppa:zhangsongcui3371/fastfetch
         apt update
         apt full-upgrade -y
-        apt install -y firefox fastfetch htop wireshark vim vlc gimp zsh gnome-tweaks gnome-logs cheese notepadqq ubuntu-restricted-extras git curl wget gpg neovim tmux git-delta
+        apt install -y firefox fastfetch htop wireshark vim vlc gimp zsh gnome-tweaks gnome-logs cheese notepadqq ubuntu-restricted-extras git curl wget gpg neovim tmux git-delta konsole
 
         # VSCode installation
         wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
