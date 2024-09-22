@@ -10,7 +10,7 @@
 # path = "~/code/<work>/.gitconfig"
 
 [core]
-    editor = vim
+    editor = nvim
     autocrlf = input
     excludesfile = ~/.gitignore_global
     # I'd probably include this if it wouldn't cause merge conflicts
