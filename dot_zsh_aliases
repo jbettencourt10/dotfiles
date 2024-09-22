@@ -8,3 +8,6 @@ alias redeploy='cd /home/jarred/code/repos/mts_main && make clean && make && sud
 alias vim="nvim"
 alias view="nvim -R"
 alias grep="rg"
+alias cat="bat"
+alias find="fd"
+alias ls="eza"

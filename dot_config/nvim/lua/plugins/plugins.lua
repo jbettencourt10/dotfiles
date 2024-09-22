@@ -9,5 +9,17 @@ return {
       -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
     }
 },
-{ "catppuccin/nvim", name = "catppuccin", priority = 1000 }
+{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+{
+  "folke/tokyonight.nvim",
+  lazy = false,
+  priority = 1000,
+  opts = {},
+},
+{
+  "olimorris/onedarkpro.nvim",
+  priority = 1000, -- Ensure it loads first
+},
+{ "navarasu/onedark.nvim", name = "onedark", priority = 1000 },
+
 }
