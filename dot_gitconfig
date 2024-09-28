@@ -17,7 +17,7 @@
     # I'd probably include this if it wouldn't cause merge conflicts
     # whitespace = fix       # Fixes whitespace errors on commit
     fileMode = false       # Disables tracking of file mode changes
-	pager = delta
+    pager = delta
 
 [init]
     defaultBranch = main
