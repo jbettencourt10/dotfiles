@@ -9,7 +9,8 @@
 # useful for work
 # [includeIf "gitdir:~/code/<work>/"]
 # path = "~/code/<work>/.gitconfig"
-$ this is a test
+# this is just a test
+# This is another test
 [core]
     editor = nvim
     autocrlf = input
