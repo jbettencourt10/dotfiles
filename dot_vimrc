@@ -1,35 +1,35 @@
-" cmap w!! w !sudo tee > /dev/null %
-" set relativenumber " Show relative line numbers
-" set number
-" syntax on
-" set tabstop=4       " Number of spaces that a <Tab> in the file counts for
-" set shiftwidth=4    " Number of spaces to use for each step of (auto)indent
-" set autoindent
-" set smartindent
-" " In an ideal world, this is set to expandtab, but not while I'm at TSC
-" set noexpandtab
-" set ignorecase
-" set smartcase
-" set incsearch
-" set hlsearch
-" set clipboard=unnamedplus
-" set mouse=a
-" set showcmd        " Show incomplete commands in the bottom-right
-" set showmode       " Display current mode (e.g., -- INSERT --)
-" set cursorline     " Highlight the current line
-" set ruler          " Show cursor position in the status line
-" set wildmenu       " Enhanced command line completion
-" " Lazyvim has problems with lazyredraw (specifically noice)
-" "set lazyredraw     " Redraw screen only when needed (improves performance)
-" set undofile        " Enable persistent undo
-" autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+"cmap w!! w !sudo tee > /dev/null %
+"set relativenumber " Show relative line numbers
+"set number
+"syntax on
+"set tabstop=4       " Number of spaces that a <Tab> in the file counts for
+"set shiftwidth=4    " Number of spaces to use for each step of (auto)indent
+"set softtabstop=4           " see multiple spaces as tabstops so <BS> does the right thing
+"set autoindent
+"set smartindent
+"" In an ideal world, this is set to expandtab, but not while I'm at TSC
+"set noexpandtab
+"set ignorecase
+"set smartcase
+"set incsearch
+"set hlsearch
+"set clipboard=unnamedplus
+"set mouse=a
+"set showcmd        " Show incomplete commands in the bottom-right
+"set showmode       " Display current mode (e.g., -- INSERT --)
+"set cursorline     " Highlight the current line
+"set ruler          " Show cursor position in the status line
+"set wildmenu       " Enhanced command line completion
+"set lazyredraw     " Redraw screen only when needed (improves performance)
+"set undofile        " Enable persistent undo
+"autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 "
-" set nocompatible            " disable compatibility to old-time vi
-" set showmatch               " show matching 
-" set mouse=v                 " middle-click paste with 
-" set softtabstop=4           " see multiple spaces as tabstops so <BS> does the right thing
-" "set cc=80                  " set an 80 column border for good coding style
-" filetype plugin indent on   "allow auto-indenting depending on file type
-" set ttyfast                 " Speed up scrolling in Vim
-" "set spell                 " enable spell check (may need to download language package)
+"set nocompatible            " disable compatibility to old-time vi
+"set showmatch               " show matching 
+"set mouse=v                 " middle-click paste with 
+"filetype plugin indent on   "allow auto-indenting depending on file type
+"set ttyfast                 " Speed up scrolling in Vim
 
+"Things are commmented below this
+"set spell                 " enable spell check (may need to download language package)
+"set cc=80                  " set an 80 column border for good coding style
