@@ -6,23 +6,14 @@
 -- NOTE: You can change these options as you wish!
 --  For more options, you can see `:help option-list`
 
--- Make vim specific changes in ~/.vimrc
-vim.cmd("source ~/.vimrc")
-
--- Make line numbers default
--- You can also add relative line numbers, to help with jumping.
---  Experiment for yourself to see if you like it!
-
--- Enable mouse mode, can be useful for resizing splits for example!
+-- Enable mouse mode
 vim.opt.mouse = "a"
 
 -- Don't show the mode, since it's already in the status line
 vim.opt.showmode = false
 
 -- Sync clipboard between OS and Neovim.
---  Schedule the setting after `UiEnter` because it can increase startup-time.
---  Remove this option if you want your OS clipboard to remain independent.
---  See `:help 'clipboard'`
+-- Schedule the setting after `UiEnter` because it can increase startup-time.
 vim.schedule(function()
   vim.opt.clipboard = "unnamedplus"
 end)
@@ -37,33 +28,62 @@ vim.opt.undofile = true
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
--- Keep signcolumn on by default
-vim.opt.signcolumn = "yes"
+-- Show relative and absolute line numbers
+vim.opt.relativenumber = true
+vim.opt.number = true
 
--- Decrease update time
-vim.opt.updatetime = 250
+-- Syntax highlighting
+vim.opt.syntax = "on"
 
--- Decrease mapped sequence wait time
--- Displays which-key popup sooner
-vim.opt.timeoutlen = 300
+-- Tab and indentation settings
+-- vim.opt.tabstop = 4 -- Number of spaces that a <Tab> in the file counts for
+-- vim.opt.shiftwidth = 4 -- Number of spaces to use for each step of (auto)indent
+-- vim.opt.autoindent = true
+-- vim.opt.smartindent = true
+vim.opt.expandtab = false -- Use spaces instead of tabs (set to true if desired)
+-- vim.opt.softtabstop = 4 -- See multiple spaces as tabstops so <BS> does the right thing
+vim.opt.fixendofline = false -- Do not add newline at the end of the file
 
--- Configure how new splits should be opened
-vim.opt.splitright = true
-vim.opt.splitbelow = true
+-- Search settings
+vim.opt.incsearch = true
+vim.opt.hlsearch = true
 
--- Sets how neovim will display certain whitespace characters in the editor.
---  See `:help 'list'`
---  and `:help 'listchars'`
-vim.opt.list = true
-vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
+-- UI settings
+vim.opt.showcmd = true -- Show incomplete commands in the bottom-right
+vim.opt.cursorline = true -- Highlight the current line
+vim.opt.ruler = true -- Show cursor position in the status line
+vim.opt.wildmenu = true -- Enhanced command line completion
+vim.opt.signcolumn = "yes" -- Keep signcolumn on by default
+vim.opt.timeoutlen = 300 -- Decrease mapped sequence wait time
+vim.opt.updatetime = 250 -- Decrease update time
+vim.opt.splitright = true -- New vertical splits go to the right
+vim.opt.splitbelow = true -- New horizontal splits go below
+vim.opt.scrolloff = 10 -- Minimal number of screen lines to keep above and below the cursor
+
+-- List characters settings
+-- vim.opt.list = true
+-- vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
+
+-- vim.opt.listchars:append("space:␣")  -- Show spaces
+-- vim.opt.listchars:append("tab:» ")    -- Customize tab representation
 
 -- Preview substitutions live, as you type!
 vim.opt.inccommand = "split"
 
--- Show which line your cursor is on
-vim.opt.cursorline = true
+-- Disable compatibility to old-time vi
+-- vim.opt.nocompatible = true
 
--- Minimal number of screen lines to keep above and below the cursor.
-vim.opt.scrolloff = 10
+-- Show matching brackets
+vim.opt.showmatch = true
+
+-- Speed up scrolling in Vim
+vim.opt.ttyfast = true
+
+-- Enable spell check (uncomment if needed)
+-- vim.opt.spell = true
+
+-- Additional options
+-- Uncomment the line below if you encounter issues with lazyredraw
+-- vim.opt.lazyredraw = true
 
 -- vim: ts=2 sts=2 sw=2 et
