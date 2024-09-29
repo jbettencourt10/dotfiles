@@ -6,7 +6,8 @@ set tabstop=4       " Number of spaces that a <Tab> in the file counts for
 set shiftwidth=4    " Number of spaces to use for each step of (auto)indent
 set autoindent
 set smartindent
-set expandtab
+" In an ideal world, this is set to expandtab, but not while I'm at TSC
+set noexpandtab
 set ignorecase
 set smartcase
 set incsearch
@@ -18,7 +19,8 @@ set showmode       " Display current mode (e.g., -- INSERT --)
 set cursorline     " Highlight the current line
 set ruler          " Show cursor position in the status line
 set wildmenu       " Enhanced command line completion
-set lazyredraw     " Redraw screen only when needed (improves performance)
+" Lazyvim has problems with lazyredraw (specifically noice)
+"set lazyredraw     " Redraw screen only when needed (improves performance)
 set undofile        " Enable persistent undo
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 
