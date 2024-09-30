@@ -1,3 +1,10 @@
+" This entire file has been addapted into lua and is now located in
+" .config/nvim/init.lua. It may be worth it to redo this for backwards
+" compatibility, and being able to use traditional vim on servers, but for now
+" I am okay with doing this. If decided to use this file again, investigate if
+" it will degrade performance to have lua do these options instead of
+" vimscript.
+
 "cmap w!! w !sudo tee > /dev/null %
 "set relativenumber " Show relative line numbers
 "set number
