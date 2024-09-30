@@ -26,7 +26,7 @@ export EDITOR="nvim"
 
 # Custom function
 resync() {
-  rsync -aP --compress --delete --backup ${1} ${2}
+  rsync -aP --compress --delete --exclude='.git' --backup ${1} ${2}
 }
 
 # NVM setup
