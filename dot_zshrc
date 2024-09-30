@@ -35,7 +35,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
 # PATH configuration
-export PATH="$PATH:/opt:$HOME/bin"
+export PATH="$PATH:/opt:$HOME/bin:$HOME/.local/kitty.app/bin"
 
 export LANG=en_US.UTF-8
 
