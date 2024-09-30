@@ -105,7 +105,8 @@ vim.opt.compatible = false
 vim.opt.showmatch = true
 
 -- Set an 80-column border for good coding style
-vim.opt.colorcolumn = '80'
+-- Good idea in principle, but in practice it's antiquated IMO
+-- vim.opt.colorcolumn = '80'
 
 -- Enable filetype plugins and indentation
 vim.cmd 'filetype plugin indent on'
