@@ -11,3 +11,10 @@ alias grep="rg"
 alias cat="bat"
 alias find="fd"
 alias ls="eza"
+
+if [[ $TERM == "xterm-kitty" ]]; then
+  alias ssh="kitten ssh"
+else
+  alias ssh="ssh"
+fi
+
