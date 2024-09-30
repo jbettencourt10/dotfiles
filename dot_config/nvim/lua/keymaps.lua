@@ -57,4 +57,11 @@ vim.api.nvim_create_autocmd('BufReadPost', {
     end
   end,
 })
+
+-- Enable html syntax highlighting for .j2 files
+vim.api.nvim_create_autocmd({ 'BufRead', 'BufNewFile' }, {
+  pattern = '*.j2',
+  command = 'set filetype=html',
+})
+
 -- vim: ts=2 sts=2 sw=2 et
