@@ -56,20 +56,19 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
--- Retain position in file when reopening
-vim.api.nvim_create_autocmd('BufReadPost', {
-  pattern = '*',
-  callback = function()
-    if vim.fn.line '\'"' > 1 and vim.fn.line '\'"' <= vim.fn.line '$' then
-      vim.cmd 'normal! g`"'
-    end
-  end,
-})
+
+
+-- From vim defaults.vim
+-- ---
+-- When editing a file, always jump to the last known cursor position.
+-- Don't do it when the position is invalid, when inside an event handler
+-- (happens when dropping a file on gvim) and for a commit message (it's
+-- likely a different one than last time).
 
 -- Enable html syntax highlighting for .j2 files
-vim.api.nvim_create_autocmd({ 'BufRead', 'BufNewFile' }, {
-  pattern = '*.j2',
-  command = 'set filetype=html',
-})
+-- vim.api.nvim_create_autocmd({ 'BufRead', 'BufNewFile' }, {
+--   pattern = '*.j2',
+--   command = 'set filetype=html',
+-- })
 
 -- vim: ts=2 sts=2 sw=2 et
