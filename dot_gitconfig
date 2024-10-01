@@ -78,7 +78,7 @@
     st = status
     last = log -1 HEAD     # Adds an alias to check the last commit
     fwl = push --force-with-lease
-	alias = ! git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /
+    alias = ! git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /
 
 [push]
     default = current
