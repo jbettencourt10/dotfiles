@@ -11,6 +11,7 @@ alias grep="rg"
 alias cat="bat"
 alias find="fd"
 alias ls="eza"
+alias kittyupdate='curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin'
 
 if [[ $TERM == "xterm-kitty" ]]; then
   alias ssh="kitten ssh"
