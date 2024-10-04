@@ -1,9 +1,3 @@
-# Work Aliases
-alias mts_python='source /home/jarred/code/envs/mts/bin/activate'
-alias sudo_mts_python='sudo /home/jarred/code/envs/mts/bin/python3'
-alias sudo_pytest='sudo /home/jarred/code/envs/mts/bin/python3 -m pytest'
-alias redeploy='cd /home/jarred/code/repos/mts_main && make clean && make && sudo make install && sudo python3 mtsApp/app/MtsMain.py'
-
 # Personal Aliases
 alias vim="nvim"
 alias view="nvim -R"
