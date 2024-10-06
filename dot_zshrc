@@ -18,7 +18,7 @@ zstyle ':omz:update' frequency 1
 HIST_STAMPS="%m/%d/%y %T "
 
 # Plugins
-plugins=(sudo web-search zsh-autosuggestions colored-man-pages command-not-found zsh-syntax-highlighting)
+plugins=(sudo web-search vi-mode zsh-autosuggestions colored-man-pages command-not-found zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
