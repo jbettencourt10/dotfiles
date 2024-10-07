@@ -104,6 +104,12 @@ vim.opt.compatible = false
 -- Show matching parentheses
 vim.opt.showmatch = true
 
+-- Set jinja files as html
+vim.filetype.add({
+  extension = {
+    j2 = 'html',  -- Associate .j2 files with HTML filetype
+  },
+})
 -- Set an 80-column border for good coding style
 -- Good idea in principle, but in practice it's antiquated IMO
 -- vim.opt.colorcolumn = '80'
