@@ -23,6 +23,7 @@ return {
         -- installed and loaded.
         cond = function()
           return vim.fn.executable 'make' == 1
+        --     i = { ['<c-enter>'] = 'to_fuzzy_refine' },
         end,
       },
       { 'nvim-telescope/telescope-ui-select.nvim' },
@@ -58,10 +59,13 @@ return {
         --
         -- defaults = {
         --   mappings = {
-        --     i = { ['<c-enter>'] = 'to_fuzzy_refine' },
         --   },
         -- },
-        -- pickers = {}
+        pickers = {buffers = {
+          sort_mru = true,
+          ignore_current_buffer = true,
+          sort_lastused = true
+        }},
         extensions = {
           ['ui-select'] = {
             require('telescope.themes').get_dropdown(),
