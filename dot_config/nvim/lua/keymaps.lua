@@ -62,4 +62,10 @@ vim.keymap.set('v', '<A-j>', ":m '>+1<CR>gv=gv", { noremap = true, silent = true
 -- Move the current line up
 vim.keymap.set('n', '<A-k>', ':m .-2<CR>==', { noremap = true, silent = true, desc = "Move line up" })
 vim.keymap.set('v', '<A-k>', ":m '<-2<CR>gv=gv", { noremap = true, silent = true, desc = "Move selected lines up" })
+
+vim.keymap.set('n', '<leader>g', function() require('neogit').open() end, { desc = 'Open [G]it Neogit' })
+vim.keymap.set('n', '<leader>m', ':Mason<CR>', { desc = 'Open [M]ason package manager' })
+vim.keymap.set('n', '<leader>l', ':Lazy<CR>', { desc = 'Open [L]azy plugin manager' })
+vim.keymap.set('n', '<leader>bd', ':bd<CR>', { desc = '[B]uffer [D]elete' })
+
 -- vim: ts=2 sts=2 sw=2 et
