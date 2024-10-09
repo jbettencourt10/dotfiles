@@ -29,6 +29,7 @@ vim.keymap.set('n', '<down>', '<cmd>echo "Use j to move!!"<CR>')
 -- w!! for writing when sudo is needed but not selected
 vim.api.nvim_set_keymap('c', 'w!!', 'w !sudo tee > /dev/null %', { noremap = true, silent = true })
 
+vim.keymap.set('n', '<leader>wa', '<cmd>wa<CR>', { desc = '[W]rite [A]ll buffers' })
 vim.keymap.set('n', '<leader>qa', '<cmd>qa<CR>', { desc = '[Q]uit [A]ll buffers' })
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
@@ -50,7 +51,6 @@ local function set_filetype(pattern, filetype)
         command = "set filetype=" .. filetype,
     })
 end
-
 set_filetype({ "docker-compose.yml" }, "yaml.docker-compose")
 
 -- Open file explorer (netrw)
