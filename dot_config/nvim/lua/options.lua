@@ -22,9 +22,11 @@ vim.opt.mouse = 'a'
 vim.opt.showmode = false
 
 -- Sync clipboard between OS and Neovim
-vim.schedule(function()
-  vim.opt.clipboard = 'unnamedplus'
-end)
+-- Turned this off because wl-clipboard is wonky, if using x11 this can be
+-- uncommented
+-- vim.schedule(function()
+--   vim.opt.clipboard = 'unnamedplus'
+-- end)
 
 -- Enable break indent
 vim.opt.breakindent = true
