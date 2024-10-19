@@ -67,7 +67,6 @@ vim.opt.scrolloff = 10
 -- Set indentation options
 vim.opt.tabstop = 4 -- Number of spaces that a <Tab> counts for
 vim.opt.shiftwidth = 4 -- Number of spaces to use for each step of (auto)indent
-vim.opt.textwidth = 80
 vim.opt.autoindent = true
 vim.opt.smartindent = true
 vim.opt.softtabstop = 4 -- See multiple spaces as tabstops so <BS> does the right thing
