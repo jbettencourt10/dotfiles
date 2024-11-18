@@ -97,3 +97,4 @@ echo "- Install Bitwarden extension"
 # import gpg key
 # import ssh key
 # make ssh key auto unlock eval agent
+# tmux plugin manager
