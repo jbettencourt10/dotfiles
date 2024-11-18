@@ -94,3 +94,6 @@ echo "- Install Bitwarden extension"
 # echo "- Install BleachBit, Discord, Synaptic, Timeshift, Spotify, Tor"
 # echo "- Install wl-clipboard for Wayland Neovim"
 # add bat, ripgrep, eza, httpie, fd, fzf
+# import gpg key
+# import ssh key
+# make ssh key auto unlock eval agent
