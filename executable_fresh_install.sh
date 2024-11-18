@@ -40,6 +40,7 @@ case "$linux_distro" in
         dnf check-update -y
         dnf upgrade -y
         dnf install -y firefox fastfetch htop wireshark vim vlc gimp zsh neovim tmux git-delta
+        echo "defaultyes=True" >> /etc/dnf/dnf.conf
         cleanup
         ;;
 
