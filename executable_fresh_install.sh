@@ -4,6 +4,8 @@ cd ~
 # What makes sense here is this:
 # Install OS
 # Paste ssh key into ~/.ssh folder from USB drive
+# Run the following line for importing gpg key
+# gpg --import private-key.asc
 # Run the following two lines
         # sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply git@github.com:jbettencourt10/dotfiles.git
 # Then run this script
@@ -83,10 +85,7 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~
 
 # TODO
 # echo "TODO:"
-# echo "- Add templates for Ubuntu"
 # echo "- Install Timeshift"
 # add bat, eza, httpie
-# import gpg key
-# import ssh key
 # make ssh key auto unlock eval agent
 # tmux plugin manager
