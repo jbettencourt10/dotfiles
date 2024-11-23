@@ -84,7 +84,7 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~
 # TODO
 # echo "TODO:"
 # echo "- Add templates for Ubuntu"
-# echo "- Install Timeshift, Tor"
+# echo "- Install Timeshift"
 # add bat, eza, httpie
 # import gpg key
 # import ssh key
