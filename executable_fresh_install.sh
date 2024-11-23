@@ -5,8 +5,7 @@
 # Install OS
 # Paste ssh key into ~/.ssh folder from USB drive
 # Run the following two lines
-        # GITHUB_USERNAME=jbettencourt10
-        # sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply git@github.com:$GITHUB_USERNAME/dotfiles.git
+        # sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply git@github.com:jbettencourt10/dotfiles.git
 # Then run this script
 
 # Check for root privileges
@@ -19,8 +18,8 @@ fi
 if [ -x "$(command -v lsb_release)" ]; then
     linux_distro=$(lsb_release -i | awk -F: '{print $2}' | xargs)
 else
-    echo 'lsb_release command not found. Unable to detect distribution.' >&2
-    exit 1
+    echo 'lsb_release command not found. Defaulting to Fedora.' >&2
+    linux_distro="Fedora"
 fi
 
 # Function to clean package cache
@@ -37,10 +36,13 @@ cleanup() {
 # Install packages based on distribution
 case "$linux_distro" in
     Fedora)
+        echo "defaultyes=True" >> /etc/dnf/dnf.conf
+        dnf install -y https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
         dnf check-update -y
         dnf upgrade -y
-        dnf install -y firefox fastfetch htop wireshark vim vlc gimp zsh neovim tmux git-delta
-        echo "defaultyes=True" >> /etc/dnf/dnf.conf
+        dnf install -y firefox fastfetch htop wireshark vim vlc gimp zsh neovim tmux git-delta wl-clipboard bleachbit flatpak discord ripgrep fd fzf
+        flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+        flatpak install -y flathub com.spotify.Client
         cleanup
         ;;
 
@@ -48,7 +50,7 @@ case "$linux_distro" in
         add-apt-repository -y ppa:zhangsongcui3371/fastfetch
         apt update
         apt full-upgrade -y
-        apt install -y firefox fastfetch htop wireshark vim vlc gimp zsh gnome-tweaks gnome-logs cheese notepadqq ubuntu-restricted-extras git curl wget gpg neovim tmux git-delta
+        apt install -y firefox fastfetch htop wireshark vim vlc gimp zsh gnome-tweaks gnome-logs cheese notepadqq ubuntu-restricted-extras git curl wget gpg neovim tmux git-delta synaptic
 
         # VSCode installation
         wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
@@ -87,13 +89,13 @@ echo "You should now reboot the system!"
 # Manual Tasks
 echo "Manual tasks to complete:"
 echo "- Install Bitwarden extension"
+echo "- Install Nvidia drivers if on Fedora, but only after rebooting. When drivers are installed, wait for them to build and then reboot again"
 
 # TODO
 # echo "TODO:"
 # echo "- Add templates for Ubuntu"
-# echo "- Install BleachBit, Discord, Synaptic, Timeshift, Spotify, Tor"
-# echo "- Install wl-clipboard for Wayland Neovim"
-# add bat, ripgrep, eza, httpie, fd, fzf
+# echo "- Install Timeshift, Tor"
+# add bat, eza, httpie
 # import gpg key
 # import ssh key
 # make ssh key auto unlock eval agent
