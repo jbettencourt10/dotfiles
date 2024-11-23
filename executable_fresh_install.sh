@@ -30,7 +30,7 @@ cleanup() {
 # Install packages based on distribution
 case "$linux_distro" in
     Fedora)
-        sudo echo "defaultyes=True" >> /etc/dnf/dnf.conf
+        echo "defaultyes=True" | sudo tee -a /etc/dnf/dnf.conf > /dev/null
         sudo dnf install -y https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
         sudo dnf check-update -y
         sudo dnf upgrade -y
