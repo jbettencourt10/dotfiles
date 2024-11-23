@@ -34,7 +34,7 @@ case "$linux_distro" in
         sudo dnf install -y https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
         sudo dnf check-update -y
         sudo dnf upgrade -y
-        sudo dnf install -y firefox fastfetch htop wireshark vim vlc gimp zsh neovim tmux git-delta wl-clipboard bleachbit flatpak discord ripgrep fd fzf kitty gnome-tweaks
+        sudo dnf install -y firefox fastfetch htop wireshark vim vlc gimp zsh neovim tmux git-delta wl-clipboard bleachbit flatpak discord ripgrep fd fzf kitty gnome-tweaks jetbrains-mono-fonts-all 
         flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
         flatpak install -y flathub com.spotify.Client
         cleanup
@@ -67,9 +67,6 @@ esac
 # Change default shell to zsh
 chsh -s "$(which zsh)"
 
-# Install fonts
-mkdir -p ~/.local/share/fonts
-sudo cp -r ~/fonts/* ~/.local/share/fonts/
 fc-cache -fv
 
 echo "You should now reboot the system!"
