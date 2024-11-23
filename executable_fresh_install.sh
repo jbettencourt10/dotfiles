@@ -1,17 +1,12 @@
 #!/bin/bash
 
+cd ~
 # What makes sense here is this:
 # Install OS
 # Paste ssh key into ~/.ssh folder from USB drive
 # Run the following two lines
         # sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply git@github.com:jbettencourt10/dotfiles.git
 # Then run this script
-
-# Check for root privileges
-if [ "$(id -u)" -ne 0 ]; then
-    echo 'This script must be run as root' >&2
-    exit 1
-fi
 
 # Detect Linux distribution
 if [ -x "$(command -v lsb_release)" ]; then
@@ -21,38 +16,35 @@ else
     linux_distro="Fedora"
 fi
 
-# Get the user's home directory (even when running as root)
-USER_HOME=$(eval echo ~$SUDO_USER)
-
 # Function to clean package cache
 cleanup() {
     if [ "$linux_distro" == "Fedora" ]; then
-        dnf autoremove -y
-        dnf clean all
+        sudo dnf autoremove -y
+        sudo dnf clean all
     elif [ "$linux_distro" == "Ubuntu" ]; then
-        apt autoremove -y
-        apt clean
+        sudo apt autoremove -y
+        sudo apt clean
     fi
 }
 
 # Install packages based on distribution
 case "$linux_distro" in
     Fedora)
-        echo "defaultyes=True" >> /etc/dnf/dnf.conf
-        dnf install -y https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
-        dnf check-update -y
-        dnf upgrade -y
-        dnf install -y firefox fastfetch htop wireshark vim vlc gimp zsh neovim tmux git-delta wl-clipboard bleachbit flatpak discord ripgrep fd fzf kitty gnome-tweaks
+        sudo echo "defaultyes=True" >> /etc/dnf/dnf.conf
+        sudo dnf install -y https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+        sudo dnf check-update -y
+        sudo dnf upgrade -y
+        sudo dnf install -y firefox fastfetch htop wireshark vim vlc gimp zsh neovim tmux git-delta wl-clipboard bleachbit flatpak discord ripgrep fd fzf kitty gnome-tweaks
         flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
         flatpak install -y flathub com.spotify.Client
         cleanup
         ;;
 
     Ubuntu)
-        add-apt-repository -y ppa:zhangsongcui3371/fastfetch
-        apt update
-        apt full-upgrade -y
-        apt install -y firefox fastfetch htop wireshark vim vlc gimp zsh gnome-tweaks gnome-logs cheese notepadqq ubuntu-restricted-extras git curl wget gpg neovim tmux git-delta synaptic
+        sudo add-apt-repository -y ppa:zhangsongcui3371/fastfetch
+        sudo apt update
+        sudo apt full-upgrade -y
+        sudo apt install -y firefox fastfetch htop wireshark vim vlc gimp zsh gnome-tweaks gnome-logs cheese notepadqq ubuntu-restricted-extras git curl wget gpg neovim tmux git-delta synaptic
 
         # VSCode installation
         wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
@@ -71,12 +63,13 @@ case "$linux_distro" in
         ;;
 esac
 
+
 # Change default shell to zsh
 chsh -s "$(which zsh)"
 
 # Install fonts
-mkdir -p "$USER_HOME/.local/share/fonts"
-cp -r ~/fonts/* "$USER_HOME/.local/share/fonts/"
+mkdir -p ~/.local/share/fonts
+cp -r ~/fonts/* ~/.local/share/fonts/
 fc-cache -fv
 
 echo "You should now reboot the system!"
@@ -86,11 +79,10 @@ echo "Manual tasks to complete:"
 echo "- Install Bitwarden extension"
 echo "- Install Nvidia drivers if on Fedora, but only after rebooting. When drivers are installed, wait for them to build and then reboot again"
 
-# Install Oh-My-Zsh and plugins
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-git clone https://github.com/zsh-users/zsh-autosuggestions "${USER_HOME}/.oh-my-zsh/custom/plugins/zsh-autosuggestions"
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "${USER_HOME}/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting"
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${USER_HOME}/.oh-my-zsh/custom/themes/powerlevel10k"
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k
 
 # TODO
 # echo "TODO:"
