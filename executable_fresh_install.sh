@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 # What makes sense here is this:
 # Install OS
 # Paste ssh key into ~/.ssh folder from USB drive
@@ -21,6 +20,9 @@ else
     echo 'lsb_release command not found. Defaulting to Fedora.' >&2
     linux_distro="Fedora"
 fi
+
+# Get the user's home directory (even when running as root)
+USER_HOME=$(eval echo ~$SUDO_USER)
 
 # Function to clean package cache
 cleanup() {
@@ -69,15 +71,12 @@ case "$linux_distro" in
         ;;
 esac
 
-
-
-
 # Change default shell to zsh
 chsh -s "$(which zsh)"
 
 # Install fonts
-mkdir -p ~/.local/share/fonts
-cp -r ~/fonts/* ~/.local/share/fonts/
+mkdir -p "$USER_HOME/.local/share/fonts"
+cp -r ~/fonts/* "$USER_HOME/.local/share/fonts/"
 fc-cache -fv
 
 echo "You should now reboot the system!"
@@ -87,10 +86,11 @@ echo "Manual tasks to complete:"
 echo "- Install Bitwarden extension"
 echo "- Install Nvidia drivers if on Fedora, but only after rebooting. When drivers are installed, wait for them to build and then reboot again"
 
+# Install Oh-My-Zsh and plugins
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k
+git clone https://github.com/zsh-users/zsh-autosuggestions "${USER_HOME}/.oh-my-zsh/custom/plugins/zsh-autosuggestions"
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "${USER_HOME}/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting"
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${USER_HOME}/.oh-my-zsh/custom/themes/powerlevel10k"
 
 # TODO
 # echo "TODO:"
