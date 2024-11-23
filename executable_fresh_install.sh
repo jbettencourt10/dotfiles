@@ -69,7 +69,7 @@ chsh -s "$(which zsh)"
 
 # Install fonts
 mkdir -p ~/.local/share/fonts
-cp -r ~/fonts/* ~/.local/share/fonts/
+sudo cp -r ~/fonts/* ~/.local/share/fonts/
 fc-cache -fv
 
 echo "You should now reboot the system!"
