@@ -103,6 +103,9 @@ vim.opt.lazyredraw = true
 -- Disable compatibility mode with old vi
 vim.opt.compatible = false
 
+-- Do not add EOL to file
+vim.opt.fixeol = false
+
 -- Show matching parentheses
 vim.opt.showmatch = true
 
