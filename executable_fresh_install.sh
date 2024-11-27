@@ -46,7 +46,7 @@ case "$linux_distro" in
         sudo add-apt-repository -y ppa:zhangsongcui3371/fastfetch
         sudo apt update
         sudo apt full-upgrade -y
-        sudo apt install -y firefox fastfetch htop wireshark vim vlc gimp zsh gnome-tweaks gnome-logs cheese notepadqq ubuntu-restricted-extras git unzip curl wget gpg neovim tmux git-delta synaptic ripgrep fd-find fzf gnome-tweaks bleachbit wl-clipboard flatpak
+        sudo apt install -y firefox fastfetch htop wireshark vim vlc gimp zsh gnome-tweaks gnome-logs cheese notepadqq ubuntu-restricted-extras git unzip curl wget gpg tmux git-delta synaptic ripgrep fd-find fzf gnome-tweaks bleachbit wl-clipboard flatpak
         curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin launch=n
         sudo snap install --beta nvim --classic
         # VSCode installation
