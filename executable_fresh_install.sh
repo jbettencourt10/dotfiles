@@ -36,7 +36,7 @@ case "$linux_distro" in
         sudo dnf install -y https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
         sudo dnf check-update -y
         sudo dnf upgrade -y
-        sudo dnf install -y firefox fastfetch htop wireshark vim vlc gimp zsh neovim tmux git-delta wl-clipboard bleachbit flatpak discord ripgrep fd fzf kitty gnome-tweaks jetbrains-mono-fonts
+        sudo dnf install -y firefox fastfetch htop wireshark vim vlc gimp zsh neovim tmux git-delta wl-clipboard bleachbit flatpak discord ripgrep fd fzf kitty gnome-tweaks jetbrains-mono-fonts unzip
         flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
         flatpak install -y flathub com.spotify.Client
         cleanup
@@ -46,15 +46,15 @@ case "$linux_distro" in
         sudo add-apt-repository -y ppa:zhangsongcui3371/fastfetch
         sudo apt update
         sudo apt full-upgrade -y
-        sudo apt install -y firefox fastfetch htop wireshark vim vlc gimp zsh gnome-tweaks gnome-logs cheese notepadqq ubuntu-restricted-extras git curl wget gpg neovim tmux git-delta synaptic ripgrep fd-find fzf kitty gnome-tweaks fonts-jetbrains-mono bleachbit wl-clipboard flatpak
+        sudo apt install -y firefox fastfetch htop wireshark vim vlc gimp zsh gnome-tweaks gnome-logs cheese notepadqq ubuntu-restricted-extras git unzip curl wget gpg neovim tmux git-delta synaptic ripgrep fd-find fzf kitty gnome-tweaks fonts-jetbrains-mono bleachbit wl-clipboard flatpak
 
         # VSCode installation
-        wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
-        install -o root -g root -m 644 packages.microsoft.gpg /etc/apt/trusted.gpg.d/packages.microsoft.gpg
-        echo "deb [arch=amd64,arm64,armhf] https://packages.microsoft.com/repos/code stable main" | tee /etc/apt/sources.list.d/vscode.list > /dev/null
-        sudo apt update
-        apt install -y code
-        rm -f packages.microsoft.gpg
+        # wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
+        # install -o root -g root -m 644 packages.microsoft.gpg /etc/apt/trusted.gpg.d/packages.microsoft.gpg
+        # echo "deb [arch=amd64,arm64,armhf] https://packages.microsoft.com/repos/code stable main" | tee /etc/apt/sources.list.d/vscode.list > /dev/null
+        # sudo apt update
+        # apt install -y code
+        # rm -f packages.microsoft.gpg
 
         cleanup
         ;;
@@ -65,11 +65,15 @@ case "$linux_distro" in
         ;;
 esac
 
+wget -P ~/Downloads "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.tar.xz"
+mkdir -p ~/.local/share/fonts/
+tar -xvf ~/Downloads/JetBrainsMono.tar.xz -C ~/.local/share/fonts/
+fc-cache -fv
+
 
 # Change default shell to zsh
 chsh -s "$(which zsh)"
 
-fc-cache -fv
 
 echo "You should now reboot the system!"
 
