@@ -46,7 +46,7 @@ case "$linux_distro" in
         sudo add-apt-repository -y ppa:zhangsongcui3371/fastfetch
         sudo apt update
         sudo apt full-upgrade -y
-        sudo apt install -y firefox fastfetch htop wireshark vim vlc gimp zsh gnome-tweaks gnome-logs cheese notepadqq ubuntu-restricted-extras git curl wget gpg neovim tmux git-delta synaptic ripgrep fd fzf kitty gnome-tweaks fonts-jetbrains-mono bleachbit wl-clipboard flatpak
+        sudo apt install -y firefox fastfetch htop wireshark vim vlc gimp zsh gnome-tweaks gnome-logs cheese notepadqq ubuntu-restricted-extras git curl wget gpg neovim tmux git-delta synaptic ripgrep fd-find fzf kitty gnome-tweaks fonts-jetbrains-mono bleachbit wl-clipboard flatpak
 
         # VSCode installation
         wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
