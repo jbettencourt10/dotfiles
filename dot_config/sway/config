@@ -7,7 +7,7 @@
 ### Variables
 #
 # Logo key. Use Mod1 for Alt.
-set $mod Mod4
+set $mod Mod1
 # Home row direction keys, like vim
 set $left h
 set $down j
@@ -17,6 +17,9 @@ set $right l
 set $term kitty
 # Your preferred application launcher
 set $menu rofi -show drun
+
+
+# NOTE: jb: Use `wdisplays` for monitor management
 
 ### Output configuration
 #
