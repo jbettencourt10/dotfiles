@@ -268,5 +268,6 @@ bindsym $mod+r mode "resize"
 bar {
      swaybar_command waybar
 }
+exec_always eval "$(ssh-agent -s)"
 
 include @sysconfdir@/sway/config.d/*
