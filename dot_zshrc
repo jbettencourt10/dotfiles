@@ -43,3 +43,9 @@ export LANG=en_US.UTF-8
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 bindkey -v
 source ~/.zsh_aliases
+
+# Run tmux on terminal startup by default
+if command -v tmux &> /dev/null; then
+    [ -z "$TMUX" ] && (tmux attach-session -t default || tmux new-session -s default)
+fi
+
