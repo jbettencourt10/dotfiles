@@ -38,7 +38,7 @@ output DP-3 pos 3840 895 res 1920x1080
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in @datadir@/backgrounds/sway/)
-# output * bg @datadir@/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+output * bg ~/Pictures/wallpapers/lain.jpg fill
 #
 # Example configuration:
 #
@@ -50,10 +50,10 @@ output DP-3 pos 3840 895 res 1920x1080
 #
 # Example configuration:
 #
-# exec swayidle -w \
-#          timeout 300 'swaylock -f -c 000000' \
-#          timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
-#          before-sleep 'swaylock -f -c 000000'
+exec swayidle -w \
+         timeout 300 'swaylock -f -c 000000' \
+         timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
+         before-sleep 'swaylock -f -c 000000'
 #
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
@@ -233,8 +233,20 @@ bindsym $mod+r mode "resize"
 
     # Stop
     bindsym XF86AudioStop exec playerctl stop
-    bindsym Print exec grim
 
+    # Enable numlock on startup
+    input type:keyboard xkb_numlock enabled
+
+    ### Screenshot full screen (save & copy)
+    bindsym Print exec grim ~/Pictures/Screenshots/screenshot-$(date +'%Y-%m-%d_%H-%M-%S').png && grim - | wl-copy
+
+    ### Screenshot selected area (save & copy)
+    bindsym Shift+Print exec grim -g "$(slurp)" - | tee ~/Pictures/Screenshots/screenshot-$(date +'%Y-%m-%d_%H-%M-%S').png | wl-copy
+
+    ### Screenshot focused window (save & copy)
+    # TODO: jb: fix this so it can save and copy without being asked twice like above
+    bindsym Ctrl+Print exec grim -g "$(swaymsg -t get_tree | jq -r '.. | select(.focused?) | .rect | "\(.x),\(.y) \(.width)x\(.height)"')" ~/Pictures/Screenshots/screenshot-$(date +'%Y-%m-%d_%H-%M-%S').png && grim -g "$(swaymsg -t get_tree | jq -r '.. | select(.focused?) | .rect | "\(.x),\(.y) \(.width)x\(.height)"')" - | wl-copy
+    # Take Screenshots
 #
 # Status Bar:
 #
