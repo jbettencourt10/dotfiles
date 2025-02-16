@@ -7,7 +7,8 @@
 ### Variables
 #
 # Logo key. Use Mod1 for Alt.
-set $mod Mod1
+# This is now the windows key (or super key)
+set $mod Mod4
 # Home row direction keys, like vim
 set $left h
 set $down j
@@ -16,10 +17,23 @@ set $right l
 # Your preferred terminal emulator
 set $term kitty
 # Your preferred application launcher
-set $menu rofi -show drun
+set $menu fuzzel
 
+# NOTE: jb: Here are tools that will be used when this transition is made
+# Application launcher: fuzzel
+# Terminal: kitty
+# Status bar: waybar
+# lock screen: swaylock
+# sleep: swayidle
+# screenshots: grim/slurp
+
+font pango: JetBrainsMono 12
+default_border none
 
 # NOTE: jb: Use `wdisplays` for monitor management
+output DP-1 pos 0 895 res 1920x1080
+output DP-2 pos 1920 895 res 1920x1080@144Hz
+output DP-3 pos 3840 895 res 1920x1080
 
 ### Output configuration
 #
@@ -208,24 +222,39 @@ bindsym $mod+r mode "resize"
     bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%-
     bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
     # Special key to take a screenshot with grim
+    # Play/Pause
+    bindsym XF86AudioPlay exec playerctl play-pause
+
+    # Next Track
+    bindsym XF86AudioNext exec playerctl next
+
+    # Previous Track
+    bindsym XF86AudioPrev exec playerctl previous
+
+    # Stop
+    bindsym XF86AudioStop exec playerctl stop
     bindsym Print exec grim
 
 #
 # Status Bar:
 #
 # Read `man 5 sway-bar` for more information about this section.
+# bar {
+#     position top
+#
+#     # When the status_command prints a new line to stdout, swaybar updates.
+#     # The default just shows the current date and time.
+#     status_command while date +'%Y-%m-%d %X'; do sleep 1; done
+#
+#     colors {
+#         statusline #ffffff
+#         background #323232
+#         inactive_workspace #32323200 #32323200 #5c5c5c
+#     }
+# }
+
 bar {
-    position top
-
-    # When the status_command prints a new line to stdout, swaybar updates.
-    # The default just shows the current date and time.
-    status_command while date +'%Y-%m-%d %X'; do sleep 1; done
-
-    colors {
-        statusline #ffffff
-        background #323232
-        inactive_workspace #32323200 #32323200 #5c5c5c
-    }
+     swaybar_command waybar
 }
 
 include @sysconfdir@/sway/config.d/*
