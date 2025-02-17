@@ -28,12 +28,24 @@ set $menu fuzzel
 # screenshots: grim/slurp
 
 font pango: JetBrainsMono 12
-default_border none
+
+# NOTE: jb: this will disable the blue border on windows
+# default_border none
 
 # NOTE: jb: Use `wdisplays` for monitor management
 output DP-1 pos 0 895 res 1920x1080
 output DP-2 pos 1920 895 res 1920x1080@144Hz
 output DP-3 pos 3840 895 res 1920x1080
+
+workspace 1 output DP-2
+workspace 2 output DP-1
+workspace 3 output DP-3
+
+# TODO: jb: do something like this for work programs
+# assign [class="Firefox"] workspace "1"
+# assign [class="Alacritty"] workspace "2"
+# assign [class="Slack"] workspace "3"
+# assign [class="Google-chrome"] workspace "4"
 
 ### Output configuration
 #
@@ -269,5 +281,6 @@ bar {
      swaybar_command waybar
 }
 exec_always eval "$(ssh-agent -s)"
+exec mako
 
 include @sysconfdir@/sway/config.d/*
