@@ -26,6 +26,7 @@ set $menu fuzzel
 # lock screen: swaylock
 # sleep: swayidle
 # screenshots: grim/slurp
+# notification: mako??
 
 font pango: JetBrainsMono 12
 
