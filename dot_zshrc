@@ -46,3 +46,5 @@ export LANG=en_US.UTF-8
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 bindkey -v
 source ~/.zsh_aliases
+
+# TODO: jb: figure out a way for ssh-agent and gpg-agent to work on sway wm
