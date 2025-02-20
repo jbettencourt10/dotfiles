@@ -10,7 +10,7 @@ fi
 bindkey '^H' backward-kill-word
 
 # Plugins
-plugins=(sudo web-search zsh-autosuggestions colored-man-pages command-not-found zsh-syntax-highlighting)
+plugins=(sudo web-search zsh-autosuggestions colored-man-pages zsh-syntax-highlighting)
 
 # Oh-My-Zsh setup
 ZSH_THEME="powerlevel10k/powerlevel10k"
