@@ -67,8 +67,8 @@ case "$linux_distro" in
 esac
 
 wget -P ~/Downloads "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.tar.xz"
-mkdir -p ~/.local/share/fonts/
-tar -xvf ~/Downloads/JetBrainsMono.tar.xz -C ~/.local/share/fonts/
+mkdir -p ~/.fonts
+tar -xvf ~/Downloads/JetBrainsMono.tar.xz -C ~/.fonts/
 fc-cache -fv
 
 
